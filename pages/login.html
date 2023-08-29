@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='zh-Hant-TW'>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="../assets/icofont/icofont.min.css">
+
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="../assets/images/2023week6/logo.png" />
+
+    <!-- 引入編譯後的 .css 檔 -->
+    <link rel="stylesheet" href="../assets/scss/css/all.css">
+
+    <!-- 引入 swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <title>7TAO | Login | 活動訂票網 | Event Booking</title>
+</head>
+
+<body>
+    <!-- header -->
+    <%- include("./layout/header") -%>
+        <!-- login -->
+        <div class="loginPage container flex-grow-1 py-0">
+            <img class="loginPage-img mb-3 d-block mx-auto" src="../assets/images/2023week6/sparkler.png"
+                alt="login-pic">
+            <h2 class="f-Noto-Serif-TC loginPage-title fw-700 mb-3 text-center">會員登入</h2>
+            <div class="row">
+                <form class="col-md-4 mx-auto needs-validation" novalidate action="#" method="post">
+                    <label class="mb-8" for="account">帳號</label>
+                    <input class="mb-3 w-100 bg-transparent fz-20 py-2 px-3" type="email" name="emailInput" id="account"
+                        placeholder="請輸入帳號" aria-label="請輸入帳號" required>
+                    <div class="invalid-feedback mt-0">
+                        帳號不可空白
+                    </div>
+                    <label class="mb-2" for="passwordInput">密碼</label>
+                    <input class="w-100 fz-20 py-2 px-3 mb-32 bg-transparent" type="password" name="passwordInput"
+                        id="passwordInput" placeholder="請輸入密碼" aria-label="請輸入密碼" required>
+                    <div class="invalid-feedback mt-0">
+                        密碼不可空白
+                    </div>
+
+                    <button class="btn-login d-block w-100 bg-black text-center py-3 py-md-2 fw-700" type="submit">登入<i
+                            class="icofont-double-right card-arrow-icon"></i></button>
+                </form>
+            </div>
+        </div>
+        <!-- footer -->
+        <%- include("./layout/login-footer") -%>
+
+        <script src="../vendor/jquery-3.7.0.min.js"></script>
+        <script type="module" src="../main.js"></script>
+
+</body>
+
+</html>
